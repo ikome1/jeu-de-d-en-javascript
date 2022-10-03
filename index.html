@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <meta charset="UTF-8">
+        <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600" rel="stylesheet">
+        <link type="text/css" rel="stylesheet" href="style.css">
+        <title>Dynamiser vos sites web avec Javascript</title>
+    </head>
+
+    <body>
+
+        <nav>
+            <div class="logo"><h1>JEU DE dé</h1></div>
+            <!-- la page qui va affiché les regles du jeu qui doit etre pris en compte pour chaque joueurs  -->
+            <div class="rules">Régle du jeu</div>
+
+            <div id="simpleModal" class="modal">
+                <div class="modal-content">
+                    <div class="modal-header">
+                            <div class="closeBtn">&times;</div>
+                            <h2>Régle du jeu </h2>
+                    </div>
+                    <ul>
+                        <li> Le jeu comprend 2 joueurs sur un seul et même écran.
+                        <li>Chaque joueur possède un score temporaire (ROUND) et un score global (GLOBAL).
+                            À chaque tour, le joueur a son ROUND initialisé à 0 et peut lancer un dé autant de fois qu'il le souhaite. Le
+                            résultat d’un lancer est ajouté au ROUND. . </li>
+                        <li>Lors de son tour, le joueur peut décider à tout moment de:
+                            - Cliquer sur l’option “Hold”, qui permet d’envoyer les points du ROUND vers le GLOBAL. Ce sera alors le
+                            tour de l’autre joueur. </li>
+                        <li> - Lancer le dé. S’il obtient un 1, son score ROUND est perdu et c’est la fin de son tour.
+                        </li>
+                        <li> Le premier joueur qui atteint les 100 points sur global gagne le jeu.
+                        </li>
+                        <li class="li"> bonne chance à vous ! que le plus chanceux gagne! </li>
+                    </ul>
+                </div>
+            </div>
+
+        </nav>
+             <!-- la page qui va affiché les regles du jeu qui doit etre pris en compte pour chaque joueurs  -->
+
+             
+           <!-- si le couleur de backgroud d'un  joueur se color en #e0e0e0 (gris) et que le point vert affiché à coté du nom;
+            cela veut dire c'est à ce joueur de jouer
+        -->
+        <div class="clr"></div>
+            
+        <div class="wrapper clearfix">
+               <!-- la partie du joueur 1 -->
+            <div class="player-0-panel active">
+                <div class="player-name" id="name-0">JOUEUR 1</div>
+                <div class="player-score" id="score-0">43</div>
+                <div class="player-current-box">
+                    <div class="player-current-label">SCORE</div>
+                    <div class="player-current-score" id="current-0">11</div>
+                </div>
+                   <!-- fin la partie du joueur 1 -->
+            </div>
+            <!-- la partie du joueur 2 -->
+            <div class="player-1-panel">
+                <div class="player-name" id="name-1">JOUEUR 2 </div>
+                <div class="player-score" id="score-1">72</div>
+                <div class="player-current-box">
+                    <div class="player-current-label">SCORE</div>
+                    <div class="player-current-score" id="current-1">0</div>
+                </div>
+            </div>
+               <!-- fin la partie du joueur 2 -->
+            
+            <button class="btn-new"><i class="ion-ios-plus-outline"></i>Nouvelle partie</button>
+            <button class="btn-roll"><i class="ion-ios-loop"></i>relance la dé</button>
+            <button class="btn-hold"><i class="ion-ios-download-outline"></i>VALIDE </button>
+            
+            <img src="dice-5.png" alt="Dice" class="dice">
+        </div>
+
+        
+        <script src="app.js"></script>
+    </body>
+</html>
